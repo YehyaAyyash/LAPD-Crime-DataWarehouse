@@ -1,0 +1,1662 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/27/2026 11:57:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="YAHYAAYYASH-PC"
+  DTS:CreatorName="YAHYAAYYASH-PC\Yahya"
+  DTS:DTSID="{155F8255-B7AC-4FFA-B976-A87B902EB9D5}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="InitialLoad"
+  DTS:PackageType="5"
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{7F66C8E1-F646-4FB6-B4C9-9FA62BC2E489}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EXCEL_VictimData]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8B810116-BF47-4A09-A849-645B0FCFDC1D}"
+      DTS:ObjectName="EXCEL_VictimData">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\VictimData.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_AreaCode]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D6D89A94-8127-4E91-94A3-4F0B53000597}"
+      DTS:ObjectName="FF_AreaCode">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\AreaCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AreaCode"
+              DTS:DTSID="{C834B005-C933-46BF-A740-0FC07C55A691}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area Name"
+              DTS:DTSID="{6E957A47-D430-47D1-905B-81C88E1EB2A4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_CrimeCode]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E6B2B059-B175-4C18-BCC8-F5B8DC5A390F}"
+      DTS:ObjectName="FF_CrimeCode">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\CrimeCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime Code"
+              DTS:DTSID="{BA1D03E6-B861-433E-8A05-EC8A49915AB4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CrimeCodeDescription"
+              DTS:DTSID="{9BB2A565-3299-4E8E-AF00-66CE172E1A05}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_CrimeIncidents]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A268FCCE-6217-4D91-9DDE-77255815678A}"
+      DTS:ObjectName="FF_CrimeIncidents">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\CrimeIncidents.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="20"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DR_NO"
+              DTS:DTSID="{BAC1059B-066E-4339-BB89-5862619AE2DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date_Reported"
+              DTS:DTSID="{5913C4DB-1308-40B6-8E17-AF29C0593131}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date_Occurred"
+              DTS:DTSID="{CD49C534-B8BC-4584-9A0C-F76D0E9D4F92}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Time_Occurred"
+              DTS:DTSID="{697497E4-84A2-44F3-A50D-62BC3312B6BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Area_Code"
+              DTS:DTSID="{BD536C10-099E-4A57-B8DA-5F628F3E1366}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime_Code"
+              DTS:DTSID="{BA908660-E8B3-4E33-87B5-132A74AE89E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Premise_Code"
+              DTS:DTSID="{0B0C7DDD-07C9-420A-A9E7-C9B239EFE553}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon_Code"
+              DTS:DTSID="{9E50F180-7678-4EA4-A0C2-32D32A6B3A68}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status_Code"
+              DTS:DTSID="{6EC72664-7FA5-4586-858C-1D3B7642BD90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rpt_District_No"
+              DTS:DTSID="{B6430874-E21D-4791-A377-ABF0C69343FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Part_1_2"
+              DTS:DTSID="{F4A82788-4844-4662-8694-5E7F7A842F70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{C4BC9171-062D-4956-B73D-3C1A18B60CE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{017490D2-A299-4808-A61E-0103FDC6EE3C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_PremiseCode]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{660B0CF4-3D14-4267-B550-CD80B84ACE20}"
+      DTS:ObjectName="FF_PremiseCode">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\PremiseCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Premise Code"
+              DTS:DTSID="{80514350-4B57-405A-A0F6-D6F951CFE75B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PremiseDescription"
+              DTS:DTSID="{5A77D82D-9491-4568-A8BA-E9BB5A5DE12C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_StatusCode]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1EFFF2BA-5C7E-4B66-A0AC-E16FDBF0EB58}"
+      DTS:ObjectName="FF_StatusCode">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\StatucCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{B084E6A9-F480-4FC4-97FD-D33868A52114}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status Desc"
+              DTS:DTSID="{4D2EE8FC-6EDB-45B4-8C87-62879B9D6FFD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FF_WeaponCode]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{05411D1A-2B15-4C36-9C54-3D537BFBCCE9}"
+      DTS:ObjectName="FF_WeaponCode">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\WeaponCodeDescription.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon Used Code"
+              DTS:DTSID="{E9E1E58F-6DBD-4405-BD15-AA89DF5DF1E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Weapon Description"
+              DTS:DTSID="{D1611C96-CBE7-427F-9AB1-F5D5DAE0E8E7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB_CrimeAnalysisDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+      DTS:ObjectName="OLEDB_CrimeAnalysisDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=CrimeAnalysisDW;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-InitialLoad-{C4C06672-7538-4198-9C52-3251DFA1BC2C}localhost.CrimeAnalysisDW;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load DIM Lookup Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8F74CC9B-D7C6-46E6-9DC4-FBBF0C96EF24}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load DIM Lookup Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="-- Truncate lookup staging&#xA;DELETE FROM STG_CrimeCode;&#xA;DELETE FROM STG_PremiseCode;&#xA;DELETE FROM STG_WeaponCode;&#xA;DELETE FROM STG_AreaCode;&#xA;DELETE FROM DIM_CRIME;&#xA;DELETE FROM DIM_PREMISE;&#xA;DELETE FROM DIM_WEAPON;&#xA;DELETE FROM DIM_AREA;&#xA;&#xA;DBCC CHECKIDENT ('DIM_CRIME', RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_PREMISE', RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_WEAPON', RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_AREA', RESEED, 0);&#xA;&#xA;-- Bulk load staging&#xA;BULK INSERT STG_CrimeCode&#xA;FROM 'C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\CrimeCodeDescription.csv'&#xA;WITH (FIRSTROW=2, FIELDTERMINATOR=',', ROWTERMINATOR='\n', CODEPAGE='65001');&#xA;&#xA;BULK INSERT STG_PremiseCode&#xA;FROM 'C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\PremiseCodeDescription.csv'&#xA;WITH (FIRSTROW=2, FIELDTERMINATOR=',', ROWTERMINATOR='\n', CODEPAGE='65001');&#xA;&#xA;BULK INSERT STG_WeaponCode&#xA;FROM 'C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\WeaponCodeDescription.csv'&#xA;WITH (FIRSTROW=2, FIELDTERMINATOR=',', ROWTERMINATOR='\n', CODEPAGE='65001');&#xA;&#xA;BULK INSERT STG_AreaCode&#xA;FROM 'C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\AreaCodeDescription.csv'&#xA;WITH (FIRSTROW=2, FIELDTERMINATOR=',', ROWTERMINATOR='\n', CODEPAGE='65001');&#xA;&#xA;-- Load DIM_CRIME&#xA;INSERT INTO DIM_CRIME &#xA;(CrimeCode, CrimeDescription, CrimeCategory, CrimeSeverity, IsViolent, IsPropertyCrime)&#xA;SELECT &#xA;    TRY_CAST(CrimeCode AS INT),&#xA;    CrimeCodeDesc,&#xA;    CASE WHEN TRY_CAST(CrimeCode AS INT) &lt;= 299 THEN 'Violent'&#xA;         WHEN TRY_CAST(CrimeCode AS INT) &lt;= 599 THEN 'Property'&#xA;         ELSE 'Other' END,&#xA;    CASE WHEN TRY_CAST(CrimeCode AS INT) &lt;= 299 THEN 'Part 1'&#xA;         ELSE 'Part 2' END,&#xA;    CASE WHEN TRY_CAST(CrimeCode AS INT) &lt;= 299 THEN 'True' ELSE 'False' END,&#xA;    CASE WHEN TRY_CAST(CrimeCode AS INT) BETWEEN 300 AND 599 THEN 'True' ELSE 'False' END&#xA;FROM STG_CrimeCode&#xA;WHERE TRY_CAST(CrimeCode AS INT) IS NOT NULL;&#xA;&#xA;-- Load DIM_PREMISE&#xA;INSERT INTO DIM_PREMISE (PremiseCode, PremiseDescription, PremiseCategory)&#xA;SELECT &#xA;    TRY_CAST(PremiseCode AS INT),&#xA;    PremiseDesc,&#xA;    CASE WHEN PremiseDesc LIKE '%HOUSE%' OR PremiseDesc LIKE '%APART%' THEN 'Residential'&#xA;         WHEN PremiseDesc LIKE '%STORE%' OR PremiseDesc LIKE '%SHOP%' THEN 'Commercial'&#xA;         WHEN PremiseDesc LIKE '%STREET%' OR PremiseDesc LIKE '%SIDEWALK%' THEN 'Public'&#xA;         WHEN PremiseDesc LIKE '%VEHICLE%' OR PremiseDesc LIKE '%CAR%' THEN 'Vehicle'&#xA;         ELSE 'Other' END&#xA;FROM STG_PremiseCode&#xA;WHERE TRY_CAST(PremiseCode AS INT) IS NOT NULL;&#xA;&#xA;-- Load DIM_WEAPON&#xA;INSERT INTO DIM_WEAPON (WeaponCode, WeaponDescription, WeaponCategory)&#xA;SELECT &#xA;    TRY_CAST(WeaponCode AS INT),&#xA;    WeaponDesc,&#xA;    CASE WHEN TRY_CAST(WeaponCode AS INT) = 0 THEN 'Unknown'&#xA;         WHEN TRY_CAST(WeaponCode AS INT) BETWEEN 101 AND 109 THEN 'Firearm'&#xA;         WHEN TRY_CAST(WeaponCode AS INT) BETWEEN 110 AND 115 THEN 'Knife'&#xA;         ELSE 'Physical' END&#xA;FROM STG_WeaponCode&#xA;WHERE TRY_CAST(WeaponCode AS INT) IS NOT NULL;&#xA;&#xA;-- Load DIM_AREA&#xA;INSERT INTO DIM_AREA &#xA;(AreaCode, AreaName, Region, Division, EffectiveDate, ExpiryDate, IsCurrent)&#xA;SELECT &#xA;    TRY_CAST(AreaCode AS INT),&#xA;    AreaName,&#xA;    CASE WHEN TRY_CAST(AreaCode AS INT) IN (1,2,6,7) THEN 'Central'&#xA;         WHEN TRY_CAST(AreaCode AS INT) IN (3,5,12,13,18) THEN 'South'&#xA;         WHEN TRY_CAST(AreaCode AS INT) IN (8,14,20) THEN 'West'&#xA;         WHEN TRY_CAST(AreaCode AS INT) IN (9,10,15,16,17,19,21) THEN 'Valley'&#xA;         ELSE 'East' END,&#xA;    'Patrol Division',&#xA;    '2018-01-01',&#xA;    NULL,&#xA;    1&#xA;FROM STG_AreaCode&#xA;WHERE TRY_CAST(AreaCode AS INT) IS NOT NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load DIM_STATUS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{199D0010-EE42-4ED9-85EB-89159A240A92}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load DIM_STATUS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="-- Clear and reload DIM_STATUS cleanly&#xA;DELETE FROM DIM_STATUS;&#xA;DBCC CHECKIDENT ('DIM_STATUS', RESEED, 0);&#xA;&#xA;INSERT INTO DIM_STATUS (StatusCode, StatusDescription, StatusCategory) VALUES&#xA;('AA',  'Adult Arrest',  'Arrest'),&#xA;('IC',  'Invest Cont',   'Investigation'),&#xA;('AO',  'Adult Other',   'Other'),&#xA;('JA',  'Juv Arrest',    'Arrest'),&#xA;('JO',  'Juv Other',     'Other'),&#xA;('CC',  'UNK',           'Unknown'),&#xA;('13',  'Juv Other',     'Juvenile'),&#xA;('14',  'Other',         'Other');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load DIM_VICTIM"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2886FF1D-BF4F-49CF-8BA4-40CE98777335}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load DIM_VICTIM"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="DELETE FROM DIM_VICTIM;&#xA;DBCC CHECKIDENT ('DIM_VICTIM', RESEED, 0);&#xA;&#xA;INSERT INTO DIM_VICTIM&#xA;(VictimNK, VictimAge, AgeGroup, VictimGender, GenderDescription,&#xA; VictimDescent, DescentDescription, EffectiveDate, ExpiryDate, IsCurrent)&#xA;SELECT &#xA;    DR_NO,&#xA;    ISNULL(Victim_Age, 0),&#xA;    CASE WHEN ISNULL(Victim_Age,0) = 0 THEN 'Unknown'&#xA;         WHEN Victim_Age &lt;= 12 THEN 'Child'&#xA;         WHEN Victim_Age &lt;= 17 THEN 'Teen'&#xA;         WHEN Victim_Age &lt;= 59 THEN 'Adult'&#xA;         ELSE 'Senior' END,&#xA;    ISNULL(Victim_Gender, 'X'),&#xA;    CASE WHEN Victim_Gender = 'M' THEN 'Male'&#xA;         WHEN Victim_Gender = 'F' THEN 'Female'&#xA;         ELSE 'Unknown' END,&#xA;    Victim_OriginalCountry,&#xA;    CASE WHEN Victim_OriginalCountry = 'H' THEN 'Hispanic'&#xA;         WHEN Victim_OriginalCountry = 'W' THEN 'White'&#xA;         WHEN Victim_OriginalCountry = 'B' THEN 'Black'&#xA;         WHEN Victim_OriginalCountry = 'A' THEN 'Asian'&#xA;         WHEN Victim_OriginalCountry = 'O' THEN 'Other'&#xA;         ELSE 'Unknown' END,&#xA;    CAST(GETDATE() AS DATE),&#xA;    NULL,&#xA;    1&#xA;FROM STG_VictimData&#xA;WHERE DR_NO IS NOT NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load FACT_CRIME_INCIDENT"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AC02E49B-4B53-4668-AB81-A693F91EA077}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load FACT_CRIME_INCIDENT"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="-- First insert a default unknown victim if not exists&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_VICTIM WHERE VictimSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_VICTIM ON;&#xA;    INSERT INTO DIM_VICTIM &#xA;    (VictimSK, VictimNK, VictimAge, AgeGroup, VictimGender, &#xA;     GenderDescription, VictimDescent, DescentDescription, &#xA;     EffectiveDate, ExpiryDate, IsCurrent)&#xA;    VALUES (1, 0, 0, 'Unknown', 'X', 'Unknown', NULL, 'Unknown', &#xA;            '2018-01-01', NULL, 1);&#xA;    SET IDENTITY_INSERT DIM_VICTIM OFF;&#xA;END&#xA;&#xA;-- Insert default unknown rows for other dimensions if needed&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_AREA WHERE AreaSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_AREA ON;&#xA;    INSERT INTO DIM_AREA &#xA;    (AreaSK, AreaCode, AreaName, Region, Division, EffectiveDate, ExpiryDate, IsCurrent)&#xA;    VALUES (1, 0, 'Unknown', 'Unknown', 'Unknown', '2018-01-01', NULL, 1);&#xA;    SET IDENTITY_INSERT DIM_AREA OFF;&#xA;END&#xA;&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_CRIME WHERE CrimeSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_CRIME ON;&#xA;    INSERT INTO DIM_CRIME &#xA;    (CrimeSK, CrimeCode, CrimeDescription, CrimeCategory, CrimeSeverity, IsViolent, IsPropertyCrime)&#xA;    VALUES (1, 0, 'Unknown', 'Other', 'Part 2', 'False', 'False');&#xA;    SET IDENTITY_INSERT DIM_CRIME OFF;&#xA;END&#xA;&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_PREMISE WHERE PremiseSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_PREMISE ON;&#xA;    INSERT INTO DIM_PREMISE (PremiseSK, PremiseCode, PremiseDescription, PremiseCategory)&#xA;    VALUES (1, 0, 'Unknown', 'Other');&#xA;    SET IDENTITY_INSERT DIM_PREMISE OFF;&#xA;END&#xA;&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_WEAPON WHERE WeaponSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_WEAPON ON;&#xA;    INSERT INTO DIM_WEAPON (WeaponSK, WeaponCode, WeaponDescription, WeaponCategory)&#xA;    VALUES (1, 0, 'Unknown', 'Unknown');&#xA;    SET IDENTITY_INSERT DIM_WEAPON OFF;&#xA;END&#xA;&#xA;IF NOT EXISTS (SELECT 1 FROM DIM_STATUS WHERE StatusSK = 1)&#xA;BEGIN&#xA;    SET IDENTITY_INSERT DIM_STATUS ON;&#xA;    INSERT INTO DIM_STATUS (StatusSK, StatusCode, StatusDescription, StatusCategory)&#xA;    VALUES (1, 'XX', 'Unknown', 'Unknown');&#xA;    SET IDENTITY_INSERT DIM_STATUS OFF;&#xA;END&#xA;&#xA;-- Now insert fact rows&#xA;INSERT INTO FACT_CRIME_INCIDENT&#xA;(DR_NO, DateOccurredKey, DateReportedKey, TimeOccurredKey,&#xA; AreaSK, CrimeSK, PremiseSK, WeaponSK, StatusSK, VictimSK,&#xA; ReportDistrictNo, Part_1_2, IncidentCount, DaysToReport,&#xA; VictimAge, Latitude, Longitude)&#xA;SELECT &#xA;    ci.DR_NO,&#xA;    CAST(FORMAT(CAST(ci.Date_Occurred AS DATE), 'yyyyMMdd') AS INT),&#xA;    CAST(FORMAT(CAST(ci.Date_Reported AS DATE), 'yyyyMMdd') AS INT),&#xA;    ISNULL(TRY_CAST(ci.Time_Occurred AS INT), 0),&#xA;    ISNULL((SELECT TOP 1 AreaSK FROM DIM_AREA &#xA;            WHERE AreaCode = ci.Area_Code AND IsCurrent = 1), 1),&#xA;    ISNULL((SELECT TOP 1 CrimeSK FROM DIM_CRIME &#xA;            WHERE CrimeCode = ci.Crime_Code), 1),&#xA;    ISNULL((SELECT TOP 1 PremiseSK FROM DIM_PREMISE &#xA;            WHERE PremiseCode = ci.Premise_Code), 1),&#xA;    ISNULL((SELECT TOP 1 WeaponSK FROM DIM_WEAPON &#xA;            WHERE WeaponCode = ISNULL(ci.Weapon_Code, 0)), 1),&#xA;    ISNULL((SELECT TOP 1 StatusSK FROM DIM_STATUS &#xA;            WHERE RTRIM(LTRIM(StatusCode)) = RTRIM(LTRIM(ci.Status_Code))), 1),&#xA;    ISNULL((SELECT TOP 1 VictimSK FROM DIM_VICTIM &#xA;            WHERE VictimNK = ci.DR_NO AND IsCurrent = 1), 1),&#xA;    ci.Rpt_District_No,&#xA;    ci.Part_1_2,&#xA;    1,&#xA;    ISNULL(DATEDIFF(DAY,&#xA;        TRY_CAST(ci.Date_Occurred AS DATE),&#xA;        TRY_CAST(ci.Date_Reported AS DATE)), 0),&#xA;    ISNULL(vd.Victim_Age, 0),&#xA;    ci.Latitude,&#xA;    ci.Longitude&#xA;FROM STG_CrimeIncidents ci&#xA;LEFT JOIN STG_VictimData vd ON ci.DR_NO = vd.DR_NO&#xA;WHERE ci.DR_NO IS NOT NULL&#xA;AND TRY_CAST(ci.Date_Occurred AS DATE) IS NOT NULL&#xA;AND TRY_CAST(ci.Date_Reported AS DATE) IS NOT NULL&#xA;AND NOT EXISTS (&#xA;    SELECT 1 FROM FACT_CRIME_INCIDENT f &#xA;    WHERE f.DR_NO = ci.DR_NO&#xA;);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load STG_CrimeIncidents"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{246429F2-1E30-4115-8405-91791FEAE557}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load STG_CrimeIncidents"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load STG_CrimeIncidents\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2057"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load STG_CrimeIncidents\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[FF_CrimeIncidents]"
+                  connectionManagerRefId="Package.ConnectionManagers[FF_CrimeIncidents]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[DR_NO]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DR_NO]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[DR_NO]"
+                      name="DR_NO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Reported]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_Reported]"
+                      length="20"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Reported]"
+                      name="Date_Reported"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_Occurred]"
+                      length="20"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Occurred]"
+                      name="Date_Occurred"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Time_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time_Occurred]"
+                      length="4"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Time_Occurred]"
+                      name="Time_Occurred"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Area_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Area_Code]"
+                      name="Area_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Crime_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Crime_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Crime_Code]"
+                      name="Crime_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Premise_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Premise_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Premise_Code]"
+                      name="Premise_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon_Code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon_Code]"
+                      name="Weapon_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Status_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status_Code]"
+                      length="10"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Status_Code]"
+                      name="Status_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Rpt_District_No]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rpt_District_No]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Rpt_District_No]"
+                      name="Rpt_District_No"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Part_1_2]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Part_1_2]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Part_1_2]"
+                      name="Part_1_2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DR_NO]"
+                      dataType="i8"
+                      name="DR_NO" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_Reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Date_Reported" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Date_Occurred" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Time_Occurred" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Area_Code]"
+                      dataType="i4"
+                      name="Area_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Crime_Code]"
+                      dataType="i4"
+                      name="Crime_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Premise_Code]"
+                      dataType="i4"
+                      name="Premise_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weapon_Code]"
+                      dataType="i4"
+                      name="Weapon_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Status_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rpt_District_No]"
+                      dataType="i4"
+                      name="Rpt_District_No" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Part_1_2]"
+                      dataType="i4"
+                      name="Part_1_2" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      dataType="nText"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load STG_CrimeIncidents\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[STG_CrimeIncidents]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLEDB_CrimeAnalysisDW]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLEDB_CrimeAnalysisDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DR_NO]"
+                      cachedDataType="i8"
+                      cachedName="DR_NO"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DR_NO]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[DR_NO]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_Reported]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Date_Reported"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Reported]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Reported]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_Occurred]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="Date_Occurred"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Occurred]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Date_Occurred]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time_Occurred]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="Time_Occurred"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_Occurred]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Time_Occurred]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Area_Code]"
+                      cachedDataType="i4"
+                      cachedName="Area_Code"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Area_Code]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Crime_Code]"
+                      cachedDataType="i4"
+                      cachedName="Crime_Code"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crime_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Crime_Code]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Premise_Code]"
+                      cachedDataType="i4"
+                      cachedName="Premise_Code"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premise_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Premise_Code]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weapon_Code]"
+                      cachedDataType="i4"
+                      cachedName="Weapon_Code"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Weapon_Code]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Status_Code"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Code]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Status_Code]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rpt_District_No]"
+                      cachedDataType="i4"
+                      cachedName="Rpt_District_No"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rpt_District_No]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Rpt_District_No]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Part_1_2]"
+                      cachedDataType="i4"
+                      cachedName="Part_1_2"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Part_1_2]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Part_1_2]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DR_NO]"
+                      dataType="i8"
+                      name="DR_NO" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Reported]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Date_Reported" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="Date_Occurred" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_Occurred]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="Time_Occurred" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area_Code]"
+                      dataType="i4"
+                      name="Area_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Crime_Code]"
+                      dataType="i4"
+                      name="Crime_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premise_Code]"
+                      dataType="i4"
+                      name="Premise_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Code]"
+                      dataType="i4"
+                      name="Weapon_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Status_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rpt_District_No]"
+                      dataType="i4"
+                      name="Rpt_District_No" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Part_1_2]"
+                      dataType="i4"
+                      name="Part_1_2" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_CrimeIncidents\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load STG_CrimeIncidents\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_CrimeIncidents\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load STG_CrimeIncidents.Paths[Flat File Source Output]"
+              endId="Package\Load STG_CrimeIncidents\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Load STG_CrimeIncidents\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load STG_VictimData"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DD759BE7-80DD-46D2-96E3-BC9AEB858C61}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load STG_VictimData"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load STG_VictimData\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">VictimData$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load STG_VictimData\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EXCEL_VictimData]"
+                  connectionManagerRefId="Package.ConnectionManagers[EXCEL_VictimData]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Digital Record Numbe]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Digital Record Numbe]"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Digital Record Numbe]"
+                      name="Digital Record Numbe"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim Age]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Age]"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim Age]"
+                      name="Victim Age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Gender]"
+                      length="255"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim Gender]"
+                      name="Victim Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim OriginalCountry]"
+                      length="255"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].Columns[Victim OriginalCountry]"
+                      name="Victim OriginalCountry"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Digital Record Numbe]"
+                      dataType="r8"
+                      name="Digital Record Numbe" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Age]"
+                      dataType="r8"
+                      name="Victim Age" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Victim Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      length="255"
+                      name="Victim OriginalCountry" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Digital Record Numbe]"
+                      dataType="r8"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Digital Record Numbe]"
+                      name="Digital Record Numbe" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Age]"
+                      dataType="r8"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Age]"
+                      name="Victim Age" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Gender]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Gender]"
+                      name="Victim Gender" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[Victim OriginalCountry]"
+                      name="Victim OriginalCountry" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load STG_VictimData\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log Package Run"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6A1BC661-7563-4641-A7B1-1B0778EFBEB9}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log Package Run"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="INSERT INTO ETL_PackageLog (PackageName, RunTime, RowsLoaded)&#xA;SELECT 'InitialLoad', GETDATE(), COUNT(*) FROM FACT_CRIME_INCIDENT;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Staging Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{81B6CDA4-9E44-402F-BC83-64EEA5DB58CF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Staging Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C4C06672-7538-4198-9C52-3251DFA1BC2C}"
+          SQLTask:SqlStatementSource="-- Only truncate accum staging, NOT CrimeIncidents (loaded via Python)&#xA;DELETE FROM STG_AccumulatingUpdate;&#xA;&#xA;-- Clear fact first (FK dependency)&#xA;DELETE FROM FACT_CRIME_INCIDENT;&#xA;&#xA;-- Clear dimensions&#xA;DELETE FROM DIM_VICTIM;&#xA;DELETE FROM DIM_CRIME;&#xA;DELETE FROM DIM_PREMISE;&#xA;DELETE FROM DIM_WEAPON;&#xA;DELETE FROM DIM_AREA;&#xA;DELETE FROM DIM_STATUS;&#xA;&#xA;-- Reset identity counters&#xA;DBCC CHECKIDENT ('DIM_VICTIM',  RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_CRIME',   RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_PREMISE', RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_WEAPON',  RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_AREA',    RESEED, 0);&#xA;DBCC CHECKIDENT ('DIM_STATUS',  RESEED, 0);&#xA;DBCC CHECKIDENT ('FACT_CRIME_INCIDENT', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FEDE8EC5-549C-4824-BDAD-C4953A846014}"
+      DTS:From="Package\Truncate Staging Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load STG_CrimeIncidents" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{79E1B533-7F2C-4A47-A35A-F252B7FA35AF}"
+      DTS:From="Package\Load STG_CrimeIncidents"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load STG_VictimData" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{B218BB5A-D471-4EAA-A647-4785A6BB94AE}"
+      DTS:From="Package\Load STG_VictimData"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load DIM_STATUS" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{A052ED62-B145-4864-B18C-C34C91BA378A}"
+      DTS:From="Package\Load DIM_STATUS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load DIM Lookup Tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{2275A6D5-5619-4CD3-9CDD-6AABBA99727B}"
+      DTS:From="Package\Load DIM Lookup Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Load DIM_VICTIM" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{55E59A09-EA96-43E3-A881-8173B63182B8}"
+      DTS:From="Package\Load DIM_VICTIM"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Load FACT_CRIME_INCIDENT" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{8CD4A675-91D2-4708-B0A5-F0DAD85E85F8}"
+      DTS:From="Package\Load FACT_CRIME_INCIDENT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Log Package Run" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Load DIM Lookup Tables"
+          TopLeft="355,412" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Load DIM_STATUS"
+          TopLeft="370,334" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Load DIM_VICTIM"
+          TopLeft="378.444444444445,482.222222222222" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Load FACT_CRIME_INCIDENT"
+          TopLeft="345,561" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Load STG_CrimeIncidents"
+          TopLeft="355,160" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Load STG_VictimData"
+          TopLeft="361,251" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Log Package Run"
+          TopLeft="386,648" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Truncate Staging Tables"
+          TopLeft="370,64" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="469.5,106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10,54"
+              Start="0,0"
+              End="-10,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23"
+                    Point2="0,27"
+                    Point3="-4,27" />
+                  <mssgle:LineSegment
+                    End="-6,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6,27"
+                    Point2="-10,27"
+                    Point3="-10,31" />
+                  <mssgle:LineSegment
+                    End="-10,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="457.25,202">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="456.5,293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="457,376">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="459.722222222222,454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.2222222222222"
+              Start="0,0"
+              End="0,20.7222222222222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.7222222222222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="462.972222222222,524.222222222222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.7777777777778"
+              Start="0,0"
+              End="0,29.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="465.75,603">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load STG_CrimeIncidents">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load STG_CrimeIncidents\Flat File Source"
+          TopLeft="300,39" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Load STG_CrimeIncidents\OLE DB Destination"
+          TopLeft="297,231" />
+        <EdgeLayout
+          Id="Package\Load STG_CrimeIncidents.Paths[Flat File Source Output]"
+          TopLeft="381.75,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,150"
+              Start="0,0"
+              End="0,142.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,142.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load STG_CrimeIncidents\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load STG_VictimData">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Load STG_VictimData\Excel Source"
+          TopLeft="460,251" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load STG_VictimData\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

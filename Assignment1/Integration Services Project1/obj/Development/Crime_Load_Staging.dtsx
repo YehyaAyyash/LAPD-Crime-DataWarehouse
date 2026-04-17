@@ -1,0 +1,1330 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/25/2026 11:12:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="YAHYAAYYASH-PC"
+  DTS:CreatorName="YAHYAAYYASH-PC\Yahya"
+  DTS:DTSID="{296D899B-C44D-4A08-B5E8-AAAABA58A98E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{2B48C017-6A02-49AF-8AC0-3D4E3594A8BB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7CFABBDE-F829-469C-8E57-FA580F274F20}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\VictimData.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{027E2B66-7734-4B3C-BEE0-525510E41120}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\Yahya\Desktop\SLIIT\Year 3\Sem 2\DWBI\Assignment 1 - 25.03.2026\VictimData.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Crime_OLTP]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{267F3725-98CF-4A29-B16C-4E2FEF1DE849}"
+      DTS:ObjectName="localhost.Crime_OLTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=Crime_OLTP;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;Application Name=SSIS-Package-{267F3725-98CF-4A29-B16C-4E2FEF1DE849}localhost.Crime_OLTP;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Crime_Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7660D80D-7578-4BF8-9A37-AD4A7DB2CE75}"
+      DTS:ObjectName="localhost.Crime_Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=;Initial Catalog=Crime_Staging;Provider=MSOLEDBSQL19.1;Persist Security Info=False;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{7660D80D-7578-4BF8-9A37-AD4A7DB2CE75}localhost.Crime_Staging;Initial File Name=;Trust Server Certificate=True;Server SPN=;Authentication=;Access Token=;Host Name In Certificate=;Server Certificate=;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract Crime Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{65EDE3F6-6995-40DE-BF7D-C02BAC479137}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Crime Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Crime Data to Staging.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{415691BB-8316-471D-871A-EE1B0CB454C1}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{C533E66D-21F5-44F5-8761-EC38D7C260D8}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Crime Data to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{D91D903C-CD47-4C57-90F0-DFB2A0527D08}"
+          DTS:EventID="9547"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{6DA853D0-64A5-4AD5-9CE7-ABEBB1AFA4AE}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Crime Data to Staging.EventHandlers[OnPreExecute]\Execute SQL Task"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{B7329895-482E-49DC-B76B-88664242572B}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Execute SQL Task"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.StgCrimeData;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Crime Data to Staging\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgCrimeData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Crime Data to Staging\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Crime_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Crime_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Digital_Record_Number]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Digital_Record_Number"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Digital_Record_Number]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Digital_Record_Number]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_Reported]"
+                      cachedDataType="dbDate"
+                      cachedName="Date_Reported"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Reported]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Reported]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_of_Occurrence]"
+                      cachedDataType="dbDate"
+                      cachedName="Date_of_Occurrence"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_Occurrence]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_Occurrence]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Time_of_Occurrence]"
+                      cachedDataType="i2"
+                      cachedName="Time_of_Occurrence"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_of_Occurrence]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_of_Occurrence]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Area_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Area_Name"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area_Name]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Area_Name]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SubArea_Number]"
+                      cachedDataType="i2"
+                      cachedName="SubArea_Number"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubArea_Number]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubArea_Number]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CrimeCodeDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CrimeCodeDescription"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCodeDescription]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[CrimeCodeDescription]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim_Age]"
+                      cachedDataType="ui1"
+                      cachedName="Victim_Age"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Age]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Age]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim_Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Victim_Gender"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Gender]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Gender]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim_OriginalCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Victim_OriginalCountry"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_OriginalCountry]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_OriginalCountry]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Premise_Code]"
+                      cachedDataType="i2"
+                      cachedName="Premise_Code"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premise_Code]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Premise_Code]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weapon_Description]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Weapon_Description"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Description]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weapon_Description]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Status_Desc]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Status_Desc"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Desc]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status_Desc]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Digital_Record_Number]"
+                      dataType="wstr"
+                      length="50"
+                      name="Digital_Record_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Reported]"
+                      dataType="dbDate"
+                      name="Date_Reported" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_of_Occurrence]"
+                      dataType="dbDate"
+                      name="Date_of_Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Time_of_Occurrence]"
+                      dataType="i2"
+                      name="Time_of_Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Area_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Area_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SubArea_Number]"
+                      dataType="i2"
+                      name="SubArea_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCodeDescription]"
+                      dataType="wstr"
+                      length="100"
+                      name="CrimeCodeDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Age]"
+                      dataType="ui1"
+                      name="Victim_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="Victim_Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_OriginalCountry]"
+                      dataType="wstr"
+                      length="50"
+                      name="Victim_OriginalCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Premise_Code]"
+                      dataType="i2"
+                      name="Premise_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weapon_Description]"
+                      dataType="wstr"
+                      length="50"
+                      name="Weapon_Description" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status_Desc]"
+                      dataType="wstr"
+                      length="50"
+                      name="Status_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Crime Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Crime Data to Staging\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CrimeDataNormalized]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Crime Data to Staging\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Crime_OLTP]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Crime_OLTP]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Digital_Record_Number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Digital_Record_Number]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Digital_Record_Number]"
+                      name="Digital_Record_Number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Reported]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_Reported]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Reported]"
+                      name="Date_Reported"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_Occurrence]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_of_Occurrence]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_of_Occurrence]"
+                      name="Date_of_Occurrence"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_of_Occurrence]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Time_of_Occurrence]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Time_of_Occurrence]"
+                      name="Time_of_Occurrence"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Area_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Area_Name]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Area_Name]"
+                      name="Area_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubArea_Number]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubArea_Number]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[SubArea_Number]"
+                      name="SubArea_Number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[CrimeCodeDescription]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CrimeCodeDescription]"
+                      length="100"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[CrimeCodeDescription]"
+                      name="CrimeCodeDescription"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Age]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_Age]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Age]"
+                      name="Victim_Age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_Gender]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_Gender]"
+                      name="Victim_Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_OriginalCountry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_OriginalCountry]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Victim_OriginalCountry]"
+                      name="Victim_OriginalCountry"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Premise_Code]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Premise_Code]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Premise_Code]"
+                      name="Premise_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weapon_Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Weapon_Description]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Weapon_Description]"
+                      name="Weapon_Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status_Desc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status_Desc]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Status_Desc]"
+                      name="Status_Desc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location]"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Digital_Record_Number]"
+                      dataType="wstr"
+                      length="50"
+                      name="Digital_Record_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_Reported]"
+                      dataType="dbDate"
+                      name="Date_Reported" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_of_Occurrence]"
+                      dataType="dbDate"
+                      name="Date_of_Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Time_of_Occurrence]"
+                      dataType="i2"
+                      name="Time_of_Occurrence" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Area_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Area_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SubArea_Number]"
+                      dataType="i2"
+                      name="SubArea_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CrimeCodeDescription]"
+                      dataType="wstr"
+                      length="100"
+                      name="CrimeCodeDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_Age]"
+                      dataType="ui1"
+                      name="Victim_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_Gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="Victim_Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Victim_OriginalCountry]"
+                      dataType="wstr"
+                      length="50"
+                      name="Victim_OriginalCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Premise_Code]"
+                      dataType="i2"
+                      name="Premise_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Weapon_Description]"
+                      dataType="wstr"
+                      length="50"
+                      name="Weapon_Description" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Status_Desc]"
+                      dataType="wstr"
+                      length="50"
+                      name="Status_Desc" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Digital_Record_Number]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Digital_Record_Number]"
+                      name="Digital_Record_Number" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_Reported]"
+                      dataType="dbDate"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_Reported]"
+                      name="Date_Reported" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_of_Occurrence]"
+                      dataType="dbDate"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_of_Occurrence]"
+                      name="Date_of_Occurrence" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Time_of_Occurrence]"
+                      dataType="i2"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Time_of_Occurrence]"
+                      name="Time_of_Occurrence" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Area_Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Area_Name]"
+                      name="Area_Name" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubArea_Number]"
+                      dataType="i2"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SubArea_Number]"
+                      name="SubArea_Number" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CrimeCodeDescription]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CrimeCodeDescription]"
+                      name="CrimeCodeDescription" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_Age]"
+                      dataType="ui1"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_Age]"
+                      name="Victim_Age" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_Gender]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_Gender]"
+                      name="Victim_Gender" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_OriginalCountry]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Victim_OriginalCountry]"
+                      name="Victim_OriginalCountry" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Premise_Code]"
+                      dataType="i2"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Premise_Code]"
+                      name="Premise_Code" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Weapon_Description]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Weapon_Description]"
+                      name="Weapon_Description" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status_Desc]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Status_Desc]"
+                      name="Status_Desc" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      dataType="r8"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      dataType="r8"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
+                      name="Location" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Crime Data to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Crime Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Crime Data to Staging\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Victim Data to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{302505A1-24B9-4054-B5EF-73196B4E1D2B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Victim Data to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Victim Data to Staging\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">VictimData$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Victim Data to Staging\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Digital Record Numbe]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Digital Record Numbe]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Digital Record Numbe]"
+                      name="Digital Record Numbe"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Age]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Age]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Age]"
+                      name="Victim Age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Gender]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Gender]"
+                      length="255"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Gender]"
+                      name="Victim Gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim OriginalCountry]"
+                      length="255"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim OriginalCountry]"
+                      name="Victim OriginalCountry"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Digital Record Numbe]"
+                      dataType="r8"
+                      name="Digital Record Numbe" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Age]"
+                      dataType="r8"
+                      name="Victim Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim Gender]"
+                      dataType="wstr"
+                      length="255"
+                      name="Victim Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].ExternalColumns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      length="255"
+                      name="Victim OriginalCountry" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Digital Record Numbe]"
+                      dataType="r8"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Digital Record Numbe]"
+                      name="Digital Record Numbe" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Age]"
+                      dataType="r8"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Age]"
+                      name="Victim Age" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Gender]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim Gender]"
+                      name="Victim Gender" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim OriginalCountry]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[Victim OriginalCountry]"
+                      name="Victim OriginalCountry" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Victim Data to Staging\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgVictimData]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Victim Data to Staging\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Crime_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Crime_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim Age]"
+                      cachedDataType="r8"
+                      cachedName="Victim Age"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Age]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Age]" />
+                    <inputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Victim Gender"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Gender]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim Gender]" />
+                    <inputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Victim OriginalCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Victim OriginalCountry"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_OriginalCountry]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Victim OriginalCountry]" />
+                    <inputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Digital Record Numbe]"
+                      cachedDataType="r8"
+                      cachedName="Digital Record Numbe"
+                      externalMetadataColumnId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Digital_Record_Number]"
+                      lineageId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output].Columns[Digital Record Numbe]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Digital_Record_Number]"
+                      dataType="wstr"
+                      length="50"
+                      name="Digital_Record_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Age]"
+                      dataType="i4"
+                      name="Victim_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_Gender]"
+                      dataType="wstr"
+                      length="20"
+                      name="Victim_Gender" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Victim_OriginalCountry]"
+                      dataType="wstr"
+                      length="100"
+                      name="Victim_OriginalCountry" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Victim Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Victim Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Victim Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Victim Data to Staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Victim Data to Staging.Paths[Excel Source Output]"
+              endId="Package\Extract Victim Data to Staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Extract Victim Data to Staging\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Extract Crime Data to Staging"
+          TopLeft="399,145" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Extract Victim Data to Staging"
+          TopLeft="413,289" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract Crime Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Extract Crime Data to Staging\OLE DB Source"
+          TopLeft="471,111" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Extract Crime Data to Staging\OLE DB Destination"
+          TopLeft="466,337" />
+        <EdgeLayout
+          Id="Package\Extract Crime Data to Staging.Paths[OLE DB Source Output]"
+          TopLeft="552,153">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,184"
+              Start="0,0"
+              End="0,176.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,176.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Crime Data to Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Crime Data to Staging\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract Crime Data to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Extract Crime Data to Staging.EventHandlers[OnPreExecute]\Execute SQL Task"
+          TopLeft="475,209" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <TaskHost
+    design-time-name="Package\Extract Victim Data to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Extract Victim Data to Staging\Excel Source"
+          TopLeft="558,197" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Extract Victim Data to Staging\OLE DB Destination"
+          TopLeft="549,450" />
+        <EdgeLayout
+          Id="Package\Extract Victim Data to Staging.Paths[Excel Source Output]"
+          TopLeft="633.75,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,211"
+              Start="0,0"
+              End="0,203.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,203.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Victim Data to Staging\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Victim Data to Staging\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,82 @@
+﻿Weapon Used Code,Weapon Description
+0,Unknown
+101,Revolver
+102,Hand Gun
+103,Rifle
+104,Shotgun
+105,Sawed Off Rifle/Shotgun
+106,Unknown Firearm
+107,Other Firearm
+108,Automatic Weapon/Sub-Machine Gun
+109,Semi-Automatic Pistol
+110,Semi-Automatic Rifle
+111,Starter Pistol/Revolver
+112,Toy Gun
+113,Simulated Gun
+114,Air Pistol/Revolver/Rifle/Bb Gun
+115,Assault Weapon/Uzi/Ak47/Etc
+116,Antique Firearm
+117,Unk Type Semiautomatic Assault Rifle
+118,Uzi Semiautomatic Assault Rifle
+119,Mac-10 Semiautomatic Assault Weapon
+120,Mac-11 Semiautomatic Assault Weapon
+121,Heckler & Koch 91 Semiautomatic Assault Rifle
+122,Heckler & Koch 93 Semiautomatic Assault Rifle
+123,M1-1 Semiautomatic Assault Rifle
+124,M-14 Semiautomatic Assault Rifle
+125,Relic Firearm
+200,Knife With Blade 6Inches Or Less
+201,Knife With Blade Over 6 Inches In Length
+202,Bowie Knife
+203,Dirk/Dagger
+204,Folding Knife
+205,Kitchen Knife
+206,Switch Blade
+207,Other Knife
+208,Razor
+209,Straight Razor
+210,Razor Blade
+211,Axe
+212,Bottle
+213,Cleaver
+214,Ice Pick
+215,Machete
+216,Scissors
+217,Sword
+218,Other Cutting Instrument
+219,Screwdriver
+220,Syringe
+221,Glass
+223,Unknown Type Cutting Instrument
+300,Blackjack
+301,Belt Flailing Instrument/Chain
+302,Blunt Instrument
+303,Brass Knuckles
+304,Club/Bat
+305,Fixed Object
+306,Rock/Thrown Object
+307,Vehicle
+308,Stick
+309,Board
+310,Concrete Block/Brick
+311,Hammer
+312,Pipe/Metal Pipe
+400,"Strong-Arm (Hands, Fist, Feet Or Bodily Force)"
+500,Unknown Weapon/Other Weapon
+501,Bomb Threat
+502,Bow And Arrow
+503,Caustic Chemical/Poison
+504,Demand Note
+505,Exploxive Device
+506,Fire
+507,Liquor/Drugs
+508,Martial Arts Weapons
+509,Rope/Ligature
+510,Scalding Liquid
+511,Verbal Threat
+512,Mace/Pepper Spray
+513,Stun Gun
+514,Tire Iron
+515,Physical Presence
+516,Dog/Animal (Sic Animal On)
+,

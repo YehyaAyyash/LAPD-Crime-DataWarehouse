@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM AREA.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:DIM AREA.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:DIM DATE.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\Crime Analysis Cube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:Crime Analysis Cube.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\CrimeAnalysisDW.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:CrimeAnalysisDW.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM TIME.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:DIM TIME.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM CRIME.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{F9CFB7DB-157B-C229-26B1-816BFF075C58}|CrimeCubeProject.dwproj|solutionrelative:DIM CRIME.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Crime Analysis Cube.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\Crime Analysis Cube.cube",
+              "RelativeDocumentMoniker": "Crime Analysis Cube.cube",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\Crime Analysis Cube.cube [Design]",
+              "RelativeToolTip": "Crime Analysis Cube.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:22:59.905Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DIM AREA.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM AREA.dim",
+              "RelativeDocumentMoniker": "DIM AREA.dim",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM AREA.dim [Design]",
+              "RelativeToolTip": "DIM AREA.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:42:22.686Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DIM DATE.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM DATE.dim",
+              "RelativeDocumentMoniker": "DIM DATE.dim",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM DATE.dim [Design]",
+              "RelativeToolTip": "DIM DATE.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:33:56.414Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrimeAnalysisDW.dsv [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\CrimeAnalysisDW.dsv",
+              "RelativeDocumentMoniker": "CrimeAnalysisDW.dsv",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\0.04.2026\\CrimeCubeProject\\CrimeAnalysisDW.dsv [Design]",
+              "RelativeToolTip": "..\\..\\0.04.2026\\CrimeCubeProject\\CrimeAnalysisDW.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:04:24.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DIM CRIME.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM CRIME.dim",
+              "RelativeDocumentMoniker": "DIM CRIME.dim",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\0.04.2026\\CrimeCubeProject\\DIM CRIME.dim [Design]",
+              "RelativeToolTip": "..\\..\\0.04.2026\\CrimeCubeProject\\DIM CRIME.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:44:38.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DIM TIME.dim [Design]",
+              "DocumentMoniker": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\DWBI_Assignment_2_Answer_IT23203662\\CubeProject_IT23203662\\DIM TIME.dim",
+              "RelativeDocumentMoniker": "DIM TIME.dim",
+              "ToolTip": "C:\\Users\\Yahya\\Desktop\\SLIIT\\Year 3\\Sem 2\\DWBI\\Assignment 2\\0.04.2026\\CrimeCubeProject\\DIM TIME.dim [Design]",
+              "RelativeToolTip": "..\\..\\0.04.2026\\CrimeCubeProject\\DIM TIME.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-01T18:45:28.049Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

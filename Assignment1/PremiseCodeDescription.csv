@@ -1,0 +1,317 @@
+﻿Premise Code,PremiseDescription
+0,Unknown
+101,Street
+102,Sidewalk
+103,Alley
+104,Driveway
+105,Pedestrian Overcrossing
+106,Tunnel
+107,Vacant Lot
+108,Parking Lot
+109,Park/Playground
+110,Freeway
+111,Bus-Charter/Private
+112,"Bus, School, Church"
+113,"Truck, Commerical"
+114,Taxi
+115,Aircraft
+116,Other/Outside
+117,Beach
+118,Construction Site
+119,"Porch, Residential"
+120,Storage Shed
+121,Yard (Residential/Business)
+122,"Vehicle, Passenger/Truck"
+123,Parking Underground/Building
+124,Bus Stop
+125,Pay Phone
+126,"Train, Other Than Mta (Also Query 809/810/811)"
+127,Trash Can/Trash Dumpster
+128,Bus Stop/Layover (Also Query 124)
+129,"Terminal, Other Than Mta"
+135,Mta Property Or Parking Lot
+136,"Other Interstate, Charter Bus"
+137,Tram/Streetcar(Boxlike Wag On Rails)*
+138,Stairwell*
+139,Amusement Park*
+140,Balcony*
+141,Cemetary*
+142,Drive Thru*
+143,Escalator*
+144,Golf Course*
+145,Mail Box
+146,Patio*
+147,Pool-Public/Outdoor Or Indoor*
+148,Public Restroom/Outside*
+149,River Bed*
+150,Tool Shed*
+151,Tow Yard*
+152,Underpass/Bridge*
+154,Train Tracks
+155,Dam/Reservoir
+156,Valet
+157,"Vehicle Storage Lot (Cars, Trucks, Rv'S, Boats, Trailers, Etc.)"
+158,Transient Encampment
+201,Jewelry Store
+202,Liquor Store
+203,Other Business
+204,Manufacturing Company
+205,Gun/Sporting Goods
+206,Tv/Radio/Appliance
+207,Bar/Cocktail/Nightclub
+208,Auto Sales Lot
+209,Equipment Rental
+210,Restaurant/Fast Food
+211,Pawn Shop
+212,Transportation Facility (Airport)
+213,Warehouse
+214,"Bus Depot/Terminal, Other Than Mta"
+215,"Train Depot/Terminal, Other Than Mta"
+216,Swap Meet
+217,Auto Repair Shop
+218,Beauty/Barber Shop
+219,Cleaner/Laundromat
+220,Nail Salon
+221,Public Storage
+222,Laundromat
+223,Video Rental Store
+224,Surplus Survival Store
+225,Record-Cd Music/Computer Game Store
+227,Abortion Clinic/Abortion Facility*
+228,Bowling Alley*
+229,Check Cashing*
+230,Day Care/Adults*
+231,Day Care/Children*
+232,"Delivery Service (Fed Ex, Ups, Couriers,Courier Service)*"
+233,Tattoo Parlor*
+234,Optical Office Inside Store Or Supermarket*
+235,Pharmacy Inside Store Or Supermarket*
+236,Vision Care Facility*
+237,Hospice
+238,Telecommunication Facility/Location
+239,Medical Marijuana Facilities/Businesses
+240,Dept Of Defense Facility
+241,Energy Plant/Facility
+242,"Discount Store (99 Cent,Dollar,Etc."
+243,"Diy Center (Lowe'S,Home Depot,Osh,Contractors Warehouse)"
+244,Tobacco Shop
+245,Catering/Ice Cream Truck
+246,Methadone Clinic
+247,Car Wash
+248,Cell Phone Store
+249,Nursery/Flower Shop
+250,Computer Services/Repairs/Sales
+251,Recycling Center
+252,"Coffee Shop (Starbucks, Coffee Bean, Peet'S, Etc.)"
+253,Mortuary
+254,Studio (Film/Photographic/Music)
+255,"Auto Dealership (Chevy, Ford, Bmw, Mercedes, Etc.)"
+256,Unknown
+301,Gas Station
+302,Factory
+303,Oil Refinery
+304,Garment Manufacturer
+305,Chemical Storage/Manufacturing Plant
+401,Mini-Mart
+402,Market
+403,Drug Store
+404,Department Store
+405,Clothing Store
+406,Other Store
+407,Hardware/Building Supply
+408,Auto Supply Store*
+409,Beauty Supply Store
+410,"Membership Store (Costco,Sams Club)*"
+411,Pet Store
+412,"Electronics Store (Ie:Radio Shack, Etc.)"
+413,Furniture Store
+414,Book Store
+415,The Grove
+416,The Beverly Center
+417,The Beverly Connection
+418,Unknown
+501,Single Family Dwelling
+502,"Multi-Unit Dwelling (Apartment, Duplex, Etc)"
+503,Hotel
+504,Other Residence
+505,Motel
+506,Abandoned Building Abandoned House
+507,Condominium/Townhouse
+508,Frat House/Sorority/Dormitory
+509,Mobile Home/Trailers/Construction Trailers/Rv'S/Motorhome
+510,Nursing/Convalescent/Retirement Home
+511,Project/Tenement/Public Housing
+512,Foster Home Boys Or Girls*
+513,Abatement Location
+514,Group Home
+515,Apartment/Condo Common Laundry Room
+516,Single Residence Occupancy (Sro'S) Locations
+517,Missions/Shelters
+518,Transitional Housing/Halfway House
+519,Short-Term Vacation Rental
+601,Savings & Loan
+602,Bank
+603,Credit Union
+604,Finance Company
+605,Automated Teller Machine (Atm)
+606,Drive Thru Banking (Window)*
+607,Banking Inside Market-Store *
+608,Bank Drop Box/Money Drop-Outside Of Bank*
+701,Hospital
+702,Office Building/Office
+703,Entertainment/Comedy Club (Other)
+704,Elementary School
+705,Slips/Dock/Marina/Boat
+706,Sex Oriented/Book Store/Strip Club/Gentleman'S Club
+707,Garage/Carport
+708,Church/Chapel (Changed 03-03 From Church/Temple)
+709,Public Restroom(Indoors-Inside)
+710,Other Premise
+711,"Arcade,Game Room/Video Games (Example Chuckie Cheese)*"
+712,Coliseum
+713,Convention Center
+714,Dodger Stadium
+715,Horse Racing/Santa Anita Park*
+716,Theatre/Movie
+717,Health Spa/Gym
+718,Massage Parlor
+719,Medical/Dental Offices
+720,Junior High School
+721,High School
+722,College/Junior College/University
+723,Private School/Preschool
+724,Trade School (Medical-Technical-Business)*
+725,"Government Facility (Federal,State, County & City)"
+726,Police Facility
+727,Shopping Mall (Common Area)
+728,Elevator
+729,Specialty School/Other
+730,Synagogue/Temple
+731,Mosque*
+732,Post Office
+733,Bar/Sports Bar (Open Day & Night)
+734,Hockey Rink/Ice Hockey
+735,Night Club (Open Evenings Only)
+736,Skateboard Facility/Skateboard Park*
+737,Skating Rink*
+738,Library
+739,Sports Arena
+740,Other Place Of Worship
+741,Staples Center *
+742,"Sports Venue, Other"
+743,Mass Gathering Location
+744,High-Rise Building
+745,Water Facility
+746,Sewage Facility/Pipe
+748,Cultural Significance/Monument
+750,Cyberspace
+751,Website
+752,Fire Station
+753,Detention/Jail Facility
+754,Museum
+755,Veterinarian/Animal Hospital
+756,Muscle Beach
+757,Basketball Courts
+758,Handball Courts
+801,Mta Bus
+802,Municipal Bus Line Includes Ladot/Dash
+803,Retired (Duplicate) Do Not Use This Code
+804,Greyhound Or Interstate Bus
+805,Retired (Duplicate) Do Not Use This Code
+809,Metrolink Train
+810,Amtrak Train
+811,"Other Rr Train (Union Pac, Sante Fe Etc"
+834,La Union Station (Not Line Specific)
+835,7Th And Metro Center (Not Line Specific)
+836,Harbor Frwy Station (Not Line Specific)
+868,Mta - Orange Line - North Hollywood
+869,Mta - Orange Line - Laurel Canyon
+870,Mta - Orange Line - Valley College
+871,Mta - Orange Line - Woodman
+872,Mta - Orange Line - Van Nuys
+873,Mta - Orange Line - Sepulveda
+874,Mta - Orange Line - Woodley
+875,Mta - Orange Line - Balboa
+876,Mta - Orange Line - Reseda
+877,Mta - Orange Line - Tampa
+878,Mta - Orange Line - Pierce College
+879,Mta - Orange Line - De Soto
+880,Mta - Orange Line - Canoga
+882,Mta - Orange Line - Sherman Way
+883,Mta - Orange Line - Roscoe
+884,Mta - Orange Line - Nordhoff
+885,Mta - Orange Line - Chatsworth
+889,Mta - Silver Line - Lac/Usc Medical Center
+890,Mta - Silver Line - Union Station
+891,Mta - Silver Line - Downtown Street Stops
+892,Mta - Silver Line - 37Th St/Usc
+893,Mta - Silver Line - Slauson
+894,Mta - Silver Line - Manchester
+895,Mta - Silver Line - Harbor Fwy
+896,Mta - Silver Line - Rosecrans
+897,Mta - Silver Line - Harbor Gateway Transit Ctr
+898,Mta - Silver Line - Pacific Coast Hwy
+900,Mta - Red Line - Union Station
+901,Mta - Red Line - Civic Center/Grand Park
+902,Mta - Red Line - Pershing Square
+903,Mta - Red Line - 7Th And Metro Center
+904,Mta - Red Line - Westlake/Macarthur Park
+905,Mta - Red Line - Wilshire/Vermont
+906,Mta - Red Line - Vermont/Beverly
+907,Mta - Red Line - Vermont/Santa Monica
+908,Mta - Red Line - Vermont/Sunset
+909,Mta - Red Line - Hollywood/Western
+910,Mta - Red Line - Hollywood/Vine
+911,Mta - Red Line - Hollywood/Highland
+912,Mta - Red Line - Universal City/Studio City
+913,Mta - Red Line - North Hollywood
+915,Mta - Purple Line - Union Station
+916,Mta - Purple Line - Civic Center/Grand Park
+917,Mta - Purple Line - Pershing Square
+918,Mta - Purple Line - 7Th And Metro Center
+919,Mta - Purple Line - Westlake/Macarthur Park
+920,Mta - Purple Line - Wilshire/Vermont
+921,Mta - Purple Line - Wilshire/Normandie
+922,Mta - Purple Line - Wilshire/Western
+931,Mta - Blue Line - 7Th And Metro Center
+932,Mta - Blue Line - Pico
+933,Mta - Blue Line - Grand/Lattc
+934,Mta - Blue Line - San Pedro
+935,Mta - Blue Line - Washington
+936,Mta - Blue Line - Vernon
+937,Mta - Blue Line - 103Rd/Watts Towers
+940,Mta - Expo Line - 7Th And Metro Center
+941,Mta - Expo Line - Pico
+942,Mta - Expo Line - Lattc/Ortho Institute
+943,Mta - Expo Line - Jefferson/Usc
+944,Mta - Expo Line - Expo Park/Usc
+945,Mta - Expo Line - Expo/Vermont
+946,Mta - Expo Line - Expo/Western
+947,Mta - Expo Line - Expo/Crenshaw
+948,Mta - Expo Line - Farmdale
+949,Mta - Expo Line - Expo/La Brea
+950,Mta - Expo Line - La Cienega/Jefferson
+951,Mta - Expo Line - Palms
+952,Mta - Expo Line - Westwood/Rancho Park
+953,Mta - Expo Line - Expo/Sepulveda
+954,Mta - Expo Line - Expo/Bundy
+956,Mta - Green Line - Avalon
+957,Mta - Green Line - Harbor Fwy
+958,Mta - Green Line - Aviation/Lax
+961,Mta - Gold Line - Indiana
+962,Mta - Gold Line - Soto
+963,Mta - Gold Line - Mariachi Plaza
+964,Mta - Gold Line - Pico/Aliso
+965,Mta - Gold Line - Little Tokyo/Arts District
+966,Mta - Gold Line - Union Station
+967,Mta - Gold Line - Chinatown
+968,Mta - Gold Line - Lincoln/Cypress
+969,Mta - Gold Line - Heritage Sq
+970,Mta - Gold Line - Southwest Museum
+971,Mta - Gold Line - Highland Park
+972,Unknown
+973,Unknown
+974,Unknown
+975,Unknown
+976,Unknown
+,

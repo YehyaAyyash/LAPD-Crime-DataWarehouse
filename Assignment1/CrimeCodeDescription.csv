@@ -1,0 +1,142 @@
+﻿Crime Code,CrimeCodeDescription
+110,Criminal Homicide
+113,"Manslaughter, Negligent"
+121,"Rape, Forcible"
+122,"Rape, Attempted"
+210,Robbery
+220,Attempted Robbery
+230,"Assault With Deadly Weapon, Aggravated Assault"
+231,Assault With Deadly Weapon On Police Officer
+235,Child Abuse (Physical) - Aggravated Assault
+236,Intimate Partner - Aggravated Assault
+237,Child Neglect (See 300 W.I.C.)
+250,"Shots Fired At Moving Vehicle, Train Or Aircraft"
+251,Shots Fired At Inhabited Dwelling
+310,Burglary
+320,"Burglary, Attempted"
+330,Burglary From Vehicle
+331,Theft From Motor Vehicle - Grand ($950.01 And Over)
+341,"Theft-Grand ($950.01 & Over)Excpt,Guns,Fowl,Livestk,Prod"
+343,Shoplifting-Grand Theft ($950.01 & Over)
+345,Dishonest Employee - Grand Theft
+347,Grand Theft / Insurance Fraud
+349,Grand Theft / Auto Repair
+350,"Theft, Person"
+351,Purse Snatching
+352,Pickpocket
+353,Drunk Roll
+354,Theft Of Identity
+410,"Burglary From Vehicle, Attempted"
+420,Theft From Motor Vehicle - Petty ($950 & Under)
+421,Theft From Motor Vehicle - Attempt
+432,Blocking Door Induction Center
+433,Driving Without Owner Consent (Dwoc)
+434,False Imprisonment
+435,Lynching
+436,Lynching - Attempted
+437,Resisting Arrest
+438,Reckless Driving
+439,False Police Report
+440,Theft Plain - Petty ($950 & Under)
+441,Theft Plain - Attempt
+442,Shoplifting - Petty Theft ($950 & Under)
+443,Shoplifting - Attempt
+444,Dishonest Employee - Petty Theft
+445,Dishonest Employee Attempted Theft
+446,Petty Theft - Auto Repair
+450,Theft From Person - Attempt
+451,Purse Snatching - Attempt
+452,"Pickpocket, Attempt"
+453,Drunk Roll - Attempt
+470,Till Tap - Grand Theft ($950.01 & Over)
+471,Till Tap - Petty ($950 & Under)
+473,"Theft, Coin Machine - Grand ($950.01 & Over)"
+474,"Theft, Coin Machine - Petty ($950 & Under)"
+475,"Theft, Coin Machine - Attempt"
+480,Bike - Stolen
+485,Bike - Attempted Stolen
+487,Boat - Stolen
+510,Vehicle - Stolen
+520,Vehicle - Attempt Stolen
+522,"Vehicle, Stolen - Other (Motorized Scooters, Bikes, Etc)"
+622,Battery On A Firefighter
+623,Battery Police (Simple)
+624,Battery - Simple Assault
+625,Other Assault
+626,Intimate Partner - Simple Assault
+627,Child Abuse (Physical) - Simple Assault
+647,Throwing Object At Moving Vehicle
+648,Arson
+649,Document Forgery / Stolen Felony
+651,Document Worthless ($200.01 & Over)
+652,Document Worthless ($200 & Under)
+653,"Credit Cards, Fraud Use ($950.01 & Over)"
+654,"Credit Cards, Fraud Use ($950 & Under"
+660,Counterfeit
+661,Unauthorized Computer Access
+662,"Bunco, Grand Theft"
+664,"Bunco, Petty Theft"
+666,"Bunco, Attempt"
+668,"Embezzlement, Grand Theft ($950.01 & Over)"
+670,"Embezzlement, Petty Theft ($950 & Under)"
+740,"Vandalism - Felony ($400 & Over, All Church Vandalisms)"
+745,Vandalism - Misdeameanor ($399 Or Under)
+753,Discharge Firearms/Shots Fired
+755,Bomb Scare
+756,Weapons Possession/Bombing
+760,Lewd/Lascivious Acts With Child
+761,Brandish Weapon
+762,Lewd Conduct
+763,Stalking
+805,Pimping
+806,Pandering
+810,"Sex,Unlawful(Inc Mutual Consent, Penetration W/ Frgn Obj"
+812,Crm Agnst Chld (13 Or Under) (14-15 & Susp 10 Yrs Older)
+813,Child Annoying (17Yrs & Under)
+814,Child Pornography
+815,Sexual Penetration W/Foreign Object
+820,Oral Copulation
+821,Sodomy/Sexual Contact B/W Penis Of One Pers To Anus Oth
+822,Human Trafficking - Commercial Sex Acts
+830,Incest (Sexual Acts Between Blood Relatives)
+840,"Beastiality, Crime Against Nature Sexual Asslt With Anim"
+845,Sex Offender Registrant Out Of Compliance
+850,Indecent Exposure
+860,Battery With Sexual Contact
+865,"Drugs, To A Minor"
+870,Child Abandonment
+880,Disrupt School
+882,Inciting A Riot
+884,Failure To Disperse
+886,Disturbing The Peace
+888,Trespassing
+890,Failure To Yield
+900,Violation Of Court Order
+901,Violation Of Restraining Order
+902,Violation Of Temporary Restraining Order
+903,Contempt Of Court
+904,Firearms Emergency Protective Order (Firearms Epo)
+906,Firearms Restraining Order (Firearms Ro)
+910,Kidnapping
+920,Kidnapping - Grand Attempt
+921,Human Trafficking - Involuntary Servitude
+922,Child Stealing
+924,Telephone Property - Damage
+926,Train Wrecking
+928,Threatening Phone Calls/Letters
+930,Criminal Threats - No Weapon Displayed
+931,"Replica Firearms(Sale,Display,Manufacture Or Distribute)"
+932,Peeping Tom
+933,Prowler
+940,Extortion
+942,Bribery
+943,Cruelty To Animals
+944,Conspiracy
+946,Other Miscellaneous Crime
+948,Bigamy
+949,Illegal Dumping
+950,"Defrauding Innkeeper/Theft Of Services, Over $950.01"
+951,"Defrauding Innkeeper/Theft Of Services, $950 & Under"
+954,Contributing
+956,"Letters, Lewd  -  Telephone Calls, Lewd"
+,
